@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <link rel="stylesheet" href="../common/css/default.css">
+    <link rel="stylesheet" href="../common/css/layout.css">
+    <link rel="stylesheet" href="../common/css/board.css">
+    <title>KKSC - 프로젝트 및 아이디어 공유 게시판</title>
+</head>
+
+<body>
+    <!-- wrap[S] -->
+    <div id="wrap">
+
+        <!-- header [S] -->
+        <header id="header" class="header">
+            <div class="header-inner inner">
+
+                <!-- headerNotice [S] -->
+                <div class="headerNotice">
+                    <span class="notioceIcon icon">
+                        <i class="fa-solid fa-bullhorn"></i>
+                    </span>
+                    <div class="swiper noticeSwiper">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide">공지사항입니다 일이삼사오육칠팔구십일이삼사오육칠팔구십</div>
+                          <div class="swiper-slide">공지사항입니다2 일이삼사오육칠팔구십일이삼사오육칠팔구십</div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                      </div>
+                    
+                </div>
+                <!-- headerNotice [E] -->
+
+
+                 <!-- headerBody [S] -->
+                 <!-- [A] 20240809 : headerBody 구조 변경 -->
+                 <div class="headerBody">
+                    <div class="headerBody-wrap">
+                        <h1 class="logo"><a href="#">KKSC</a></h1>
+                        <!-- gnb -->
+                        <div class="gnb-trigger" id="gnb-trigger">
+                            <button type="button">
+                                <i class="fa-solid fa-bars icon menuIcon"></i>
+                                <i class="fa-solid fa-x icon closeIcon"></i>
+                            </button>
+                        </div>
+                        <div class="gnb">
+                            <div id="gnb-link" class="gnb-link">
+                                <ul>
+                                    <!-- [L] :: 임시 메뉴 항목입니다.  -->
+                                    <li><a href="#">동아리 소개</a></li>
+                                    <li><a href="#">모집 분야</a></li>
+                                    <li><a href="#">모집 안내</a></li>
+                                    <li><a href="#">모집 일정</a></li>
+                                    <li><a href="#">지원하기</a></li>
+                                </ul>
+                            </div>
+                            
+                            <!-- [D] :: 확인할 메시지가 있을 경우 class on 추가 / 없을 경우 on 제거 -->
+                            <div class="alert on">
+                                <a href="#" class="alertBtn">
+                                    <span class="alertIcon icon">
+                                        <i class="fa-solid fa-bell"></i>
+                                    </span>
+                                </a>
+        
+                                <div class="alertPopup">
+                                    <div class="alertItem notRead">
+                                        <a href="#">
+                                            <span class="alert-title">읽지 않은 메세지 예시 UI입니다.</span>
+                                            <p class="alert-desc">메세지 내용 메세지 내용 메세지 내용 메세지 내용</p>
+                                        </a>
+                                    </div>
+                                    <div class="alertItem">
+                                        <a href="">
+                                            <span class="alert-title">읽은 메세지 예시 UI입니다.</span>
+                                            <p class="alert-desc">메세지 내용 메세지 내용 메세지 내용 메세지 내용</p>
+                                        </a>
+                                    </div>
+                                    <div class="alertItem">
+                                        <a href="">
+                                            <span class="alert-title">읽은 메세지 예시 UI입니다.</span>
+                                            <p class="alert-desc">메세지 내용 메세지 내용 메세지 내용 메세지 내용</p>
+                                        </a>
+                                    </div>
+                                    <div class="alertItem">
+                                        <a href="">
+                                            <span class="alert-title">읽은 메세지 예시 UI입니다.</span>
+                                            <p class="alert-desc">메세지 내용 메세지 내용 메세지 내용 메세지 내용</p>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- [A] 20240809 : headerBody 구조 변경 -->
+                <!-- headerBody [E] -->
+            </div>
+        </header>
+        <!-- header [E] -->
+
+        <!-- content [S] -->
+        <main id="content">
+            <!-- board [S] -->
+            <section id="board" class="board">
+                <div class="board-inner">
+                    <div class="board-content">
+                        <div class="board-title">
+                            <h3>KKSC IDEA BOARD</h3>
+                            <p>자유롭게 프로젝트 및 아이디어를 공유해 보세요.</p>
+                        </div>
+                        <ul class="board-list">
+                            <!-- [A] :: 추후 각 게시판 페이지로 이동 -->
+                            <li><a href="./board-notice.html">공유 게시판</a></li>
+                            <li><a href="./board-portfolio.html">포트폴리오</a></li>
+                            <li><a href="./board-notice.html">공지사항</a></li>
+                        </ul>
+
+                        <div class="board-tbl">
+                            <!-- <h4 class="tbl-title">공유 게시판</h4> -->
+                            <table class="tbl">
+                                <caption>KKSC 공유 게시판</caption>
+                                <colgroup>
+                                    <col>
+                                    <col>
+                                    <col>
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th>번호</th>
+                                        <th>제목</th>
+                                        <th>등록일</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <!-- [D] ::  메인 공지에 class notice 추가 -->
+                                        <td class="tbl-num notice"><span>공지</span></td>
+                                        <td class="tbl-detail">
+                                            <p><a href="./board-view.html">일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십</a></p>
+                                        </td>
+                                        <td class="tbl-date"><span>2024.06.16</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tbl-num"><span>1</span></td>
+                                        <td class="tbl-detail">
+                                            <p><a href="./board-view.html">일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십</a></p>
+                                        </td>
+                                        <td class="tbl-date"><span>2024.06.16</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tbl-num"><span>2</span></td>
+                                        <td class="tbl-detail">
+                                            <p><a href="./board-view.html">일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십</a></p>
+                                        </td>
+                                        <td class="tbl-date"><span>2024.06.16</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tbl-num"><span>3</span></td>
+                                        <td class="tbl-detail">
+                                            <p><a href="./board-view.html">일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십</a></p>
+                                        </td>
+                                        <td class="tbl-date"><span>2024.06.16</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tbl-num"><span>4</span></td>
+                                        <td class="tbl-detail">
+                                            <p><a href="./board-view.html">일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십</a></p>
+                                        </td>
+                                        <td class="tbl-date"><span>2024.06.16</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tbl-num"><span>5</span></td>
+                                        <td class="tbl-detail">
+                                            <p><a href="./board-view.html">일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십</a></p>
+                                        </td>
+                                        <td class="tbl-date"><span>2024.06.16</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tbl-num"><span>6</span></td>
+                                        <td class="tbl-detail">
+                                            <p><a href="./board-view.html">일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십</a></p>
+                                        </td>
+                                        <td class="tbl-date"><span>2024.06.16</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tbl-num"><span>7</span></td>
+                                        <td class="tbl-detail">
+                                            <p><a href="./board-view.html">일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십</a></p>
+                                        </td>
+                                        <td class="tbl-date"><span>2024.06.16</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tbl-num"><span>8</span></td>
+                                        <td class="tbl-detail">
+                                            <p><a href="./board-view.html">일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십</a></p>
+                                        </td>
+                                        <td class="tbl-date"><span>2024.06.16</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tbl-num"><span>9</span></td>
+                                        <td class="tbl-detail">
+                                            <p><a href="./board-view.html">일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십</a></p>
+                                        </td>
+                                        <td class="tbl-date"><span>2024.06.16</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- [D] :: 10개 이상일 경우 노출  -->
+                        <div class="tbl-pagination">
+                            <ul>
+                                <!-- [D] :: 활성화 숫자에 class on 추가 -->
+                                <li><a href="#">1</a></li>
+                                <li><a href="#">2</a></li>
+                                <li class="on"><a href="#">3</a></li>
+                                <li><a href="#">4</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- board [E] -->
+        </main>
+        <!-- content [E] -->
+
+
+        <!-- footer [S] -->
+        <footer id="footer" class="footer">
+            <div class="footer-inner inner">
+                <h1 class="logo"><a href="#">KKSC</a></h1>
+                <div class="footer-content">
+                    <p class="copyright">© 2024 KKSC. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+        <!-- //footer [E] -->
+    </div>
+    <!-- //wrap -->
+
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="../common/js/ui.js"></script>
+</body>
+
+</html>

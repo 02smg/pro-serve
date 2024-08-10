@@ -1,0 +1,72 @@
+@charset "utf-8";
+
+/* 게시판, 공지사항 용 - table */
+.board .write-btn {float: right; margin-bottom: 20px;}
+.board .board-tbl {width: 800px; margin: 100px auto 0; }
+.board .board-tbl .tbl-title {font-size: 20px; text-align: left;}
+.board .board-tbl .tbl {width: 100%; margin-top: 15px; border-top: 3px solid #fff; border-bottom: 2px solid #fff; box-sizing: border-box;}
+.board .board-tbl thead {border-bottom: 2px solid rgba(255, 255, 255, 0.2);}
+.board .board-tbl th,
+.board .board-tbl td {padding: 16px 0;}
+.board .board-tbl thead th:nth-child(1) {width: 150px;}
+.board .board-tbl thead th:nth-child(2) {width: 500px;}
+.board .board-tbl tbody {font-size: 15px;}
+.board .board-tbl td.tbl-num.notice span {display: inline-block; padding: 6px 16px 5px; border-radius: 16px; background-color: #006b99; font-size: 14px;}
+.board .board-tbl td.tbl-detail {width: 500px;}
+.board .board-tbl td.tbl-detail p {width: 500px; overflow: hidden; text-overflow: ellipsis;white-space: nowrap;}
+.board .board-tbl td.tbl-detail p:hover {text-decoration: underline;}
+/* 게시판, 공지사항 용 - table */
+
+/* 포트폴리오 용 - card */
+.board-card {margin: 100px auto 0;}
+.board-card .card {position: relative;display: flex;flex-wrap: wrap; }
+
+.board-card .card.row-3 {width: calc(100%);gap: 20px;}
+.board-card .card.row-3 .cardItem {width: calc((100% / 3 - 13.333px));}
+.board-card .itemTitle {position: absolute;top: 0;left: 0;padding-left: 20px;font-size: 16px;font-weight: 600;color: #4E4F51;}
+.cardItem {overflow: hidden;position: relative;height: 380px;max-height: 380px;border-radius: 26px; border: 2px solid rgba(255, 255, 255, 0.2);}
+.cardItem .card-thumb {overflow: hidden;width: 100%; height: 157px;}
+.cardItem .card-thumb img {width: 100%; height: 100%;transition: all 0.3s;}
+.cardItem:hover .card-thumb img {-webkit-transform: scale(1.1);-moz-transform: scale(1.1);-ms-transform: scale(1.1);-o-transform: scale(1.1);transform: scale(1.1);}
+
+.cardItem .card-detail {position: relative;width: 100%;height: calc(100% - 223px);padding: 24px 20px 20px; border-top: 1px solid rgba(255, 255, 255, 0.2); text-align: left;}
+.cardItem .card-detail .card-type {font-size: 14px;color: #01B3FF;font-weight: 600;letter-spacing: 0 !important;}
+.cardItem .card-detail .card-title {margin-top: 11px;font-size: 18px;font-weight: 600;}
+.cardItem .card-detail .card-desc {position: relative;margin-top: 15px;font-size: 12px;line-height: 18px;word-break: break-all; display: -webkit-box;word-wrap: break-word;-webkit-line-clamp: 3;-webkit-box-orient: vertical;text-overflow: ellipsis;overflow: hidden; opacity: 0.6;}
+
+.cardItem .btn-view {position: absolute; left: 20px; bottom: 24px; padding: 10px 20px 10px;}
+/* 포트폴리오 용 - card */
+
+/*--------------------------------- 모바일 --------------------------------- */
+@media screen and (max-width: 880px) {
+    .board .write-btn {margin-bottom: 2.500vw;}
+
+    .board .board-tbl {width: calc(100% - 7.500vw); margin: 12.500vw auto 0;}
+    .board .board-tbl .tbl {margin-top: 1.875vw; border-top: 0.375vw solid #fff; border-bottom: 0.250vw solid #fff;}
+    .board .board-tbl thead {border-bottom: 0.250vw solid rgba(255, 255, 255, 0.2);}
+    .board .board-tbl th,
+    .board .board-tbl td {padding: 2.500vw 0;}
+    .board .board-tbl thead {font-size: 2.750vw;}
+    .board .board-tbl thead th:nth-child(1) {width: 14.375vw;}
+    .board .board-tbl thead th:nth-child(2) {width: 56.250vw;}
+    .board .board-tbl tbody {font-size: 2.500vw; line-height: 2.7vw;}
+    .board .board-tbl td.tbl-num {width: 12.500vw !important;}
+    .board .board-tbl td.tbl-num.notice span {padding: 0.750vw 2.000vw 0.625vw; border-radius: 2.500vw; font-size: 2.250vw;}
+    .board .board-tbl td.tbl-detail {width: 50.000vw;}
+    .board .board-tbl td.tbl-detail p {width: 50.000vw;}
+
+
+    .board-card {margin: 12.500vw auto 0;}
+    .board-card .card.row-3 {width: calc(100%); gap: 2.500vw;}
+    .board-card .card.row-3 .cardItem {width: calc((100% / 2) - 1.250vw);}
+    
+    .cardItem {height: 62.500vw;max-height: 62.500vw;border-radius: 3.250vw; border: 0.250vw solid rgba(255, 255, 255, 0.2);}
+    .cardItem .card-thumb {width: 100%; height: 27.938vw;}
+
+    .cardItem .card-detail {width: 100%;height: calc(100% - 27.938vw);padding: 3.750vw 4.000vw 4.000vw; border-top: 0.125vw solid rgba(255, 255, 255, 0.2); }
+    .cardItem .card-detail .card-type {font-size: 2.250vw;}
+    .cardItem .card-detail .card-title {margin-top: 1.625vw;font-size: 2.500vw;}
+    .cardItem .card-detail .card-desc {margin-top: 2.250vw;font-size: 2.000vw;line-height: 2.750vw;}
+
+    .cardItem .btn-view { left: 4.000vw; bottom: 4.000vw; padding: 1.500vw 2.500vw 1.250vw; font-size: 2.000vw;}
+}

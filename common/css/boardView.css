@@ -1,0 +1,90 @@
+@charset "utf-8";
+
+.board {margin-bottom: 100px;}
+.board .board-view {margin: 100px auto 0; border-bottom: 1px solid #fff;}
+.board .board-btn {float: left; margin-top: 60px;}
+
+.board-view .view-head {margin:0 auto; padding: 40px 20px 25px; border:solid #b6b6b6; border-width: 4px 0 1px;text-align: left; }
+.board-view .view-head .head-type {font-size: 14px; color: #01B3FF;}
+.board-view .view-head .head-title {margin-top: 16px; font-size: 24px;}
+.board-view .view-head .head-info {display: flex; justify-content:space-between; margin-top: 30px; font-size: 14px; font-weight: 400; color: #7b7b7b;}
+
+.board-view .veiw-body {padding: 100px 50px; border-bottom: 1px solid #b6b6b6;}
+.board-view .veiw-body img {display: block; max-width: 450px; margin: 0 auto 40px;}
+.board-view .veiw-body p {line-height: 28px; text-align: left; word-break: break-all;}
+
+.board-view .view-comment {padding: 40px 50px;}
+.board-view .comment-write {overflow: hidden; padding-bottom: 40px; border-bottom: 1px solid #7b7b7b;}
+.board-view .comment-write span {display: inline-block; width: 100%; margin-bottom: 14px; text-align: left; font-size: 14px; }
+.board-view .comment-write textarea {width: 100%; height: 140px; padding: 20px 30px; background-color: rgba(255, 255, 255, 0.3); border: 0 none; font-size: 14px; resize: none;}
+.board-view .view-comment .btn {float: right; margin-top: 20px;}
+
+.board-view .comment-list {margin-top: 40px;}
+.board-view .comment-list .commentItem {overflow: hidden;}
+.board-view .comment-list .commentItem-wrap {position: relative;}
+.board-view .comment-list .commentItem-wrap::after {content: ''; position: absolute; top: 60px; left: 24px;  width: 2px; height: calc(100% - 50px); background-color: #747474; border-radius: 5px;}
+.board-view .comment-list .comment-user {display: flex; align-items: center;}
+.board-view .comment-user .user-thumb {overflow: hidden; width: 50px; height: 50px; margin-right: 30px; border-radius: 50%;}
+.board-view .comment-user .user-thumb img {width: 100%; height: 100%; object-fit: fill;}
+.board-view .comment-user .user-info {width: calc(100% - 80px); display: flex; justify-content: space-between; align-items: center; font-size: 18px; color: #01B3FF; font-weight: 700;} 
+.board-view .comment-user .user-date {font-size: 14px; color: #fff; font-weight: 300; color: #7b7b7b;}
+
+.board-view .comment-list .comment-detail {margin: 12px 0; padding-left: 80px; font-size: 14px; line-height: 20px; text-align: left; word-break: break-all;}
+
+.board-view .reply-list {overflow: hidden;float: right; width: calc(100% - 70px); margin: 30px auto;}
+.board-view .reply-form {overflow: hidden; display: none; }
+.board-view .reply-form textarea {width: calc(100% - 70px);height: 100px; margin: 20px 0 0 70px; padding: 15px 20px; background-color: rgba(255, 255, 255, 0.3); border: 0 none; font-size: 14px; resize: none;}
+
+.board-view .reply-list .replyItem {overflow: hidden; margin-top: 10px;}
+.board-view .reply-list .replyItem-wrap {position: relative;}
+.board-view .reply-list .replyItem-wrap::after {content: ''; position: absolute; top: 50px; left: 20px;  width: 2px; height: calc(100% - 50px); background-color: #747474; border-radius: 5px;}
+.board-view .replyItem .reply-user {display: flex; align-items: center;}
+.board-view .reply-user .user-thumb {overflow: hidden; width: 40px; height: 40px; margin-right: 20px; border-radius: 50%;}
+.board-view .reply-user .user-thumb img {width: 100%; height: 100%; object-fit: fill;}
+.board-view .reply-user .user-info {width: calc(100% - 60px); display: flex; justify-content: space-between; align-items: center; font-size: 16px; color: #01B3FF; font-weight: 700;} 
+.board-view .reply-user .user-date {font-size: 12px; color: #fff; font-weight: 300; color: #7b7b7b;}
+
+.board-view .replyItem .reply-detail {margin-bottom: 10px; padding-left: 60px; font-size: 12px; line-height: 20px; text-align: left; word-break: break-all;}
+
+
+/*--------------------------------- 모바일 --------------------------------- */
+@media screen and (max-width: 880px) { 
+    .board {margin-bottom: 12.500vw;}
+    .board .board-view {margin: 12.500vw auto 0; border-bottom: 0.250vw solid #fff;}
+    .board .board-btn {margin-top: 7.500vw;}
+
+    .board-view .view-head {margin:0 auto; padding: 5.000vw 2.500vw 3.125vw; border:solid #b6b6b6; border-width: 0.500vw 0 0.125vw; }
+    .board-view .view-head .head-type {font-size: 2.250vw;}
+    .board-view .view-head .head-title {margin-top: 2.500vw; font-size: 3.500vw;}
+    .board-view .view-head .head-info {margin-top: 4.000vw; font-size: 2.000vw;}
+
+    .board-view .veiw-body {padding: 12.500vw 6.250vw; border-bottom: 0.250vw solid #b6b6b6;}
+    .board-view .veiw-body img {max-width: 80%; margin: 0 auto 5.000vw;}
+    .board-view .veiw-body p {font-size: 2.250vw; line-height: 3.750vw;}
+
+    .board-view .view-comment {padding: 5.000vw 6.250vw;}
+    .board-view .comment-write {padding-bottom: 5.000vw; border-bottom: 0.250vw solid #7b7b7b;}
+    .board-view .comment-write span {width: 100%; margin-bottom: 2.000vw; font-size: 2.000vw; line-height: 2.125vw;}
+    .board-view .comment-write textarea {width: 100%; height: 17.500vw; padding: 2.500vw 3.750vw; font-size: 2.250vw;}
+    .board-view .view-comment .btn {margin-top: 2.500vw; font-size: 1.750vw;}
+ 
+    
+    .board-view .comment-list {margin-top: 5.000vw;}
+    .board-view .comment-list .commentItem-wrap::after {top: 7.500vw; left: 3.000vw;  width: 0.250vw; height: calc(100% - 6.250vw);  border-radius: 0.625vw;}
+    .board-view .comment-user .user-thumb { width: 6.250vw; height: 6.250vw; margin-right: 3.750vw;}
+    .board-view .comment-user .user-info {width: calc(100% - 10.000vw); font-size: 2.250vw;} 
+    .board-view .comment-user .user-date {font-size: 2.000vw;}
+
+    .board-view .comment-list .comment-detail {margin: 1.750vw 0; padding-left: 10.000vw; font-size: 2.000vw; line-height: 2.750vw;}
+
+    .board-view .reply-list {width: calc(100% - 8.750vw); margin: 3.750vw auto;}
+    .board-view .reply-form textarea {width: calc(100% - 8.750vw);height: 12.500vw; margin: 2.500vw 0 0 8.750vw; padding: 1.875vw 2.500vw; background-color: rgba(255, 255, 255, 0.3); border: 0 none; font-size: 1.750vw; resize: none;}
+
+    .board-view .reply-list .replyItem {margin-top: 1.250vw;}
+    .board-view .reply-list .replyItem-wrap::after {top: 6.250vw; left: 2.500vw;  width: 0.250vw; height: calc(100% - 6.250vw);  border-radius: 0.625vw;}
+    .board-view .reply-user .user-thumb {width: 5.000vw; height: 5.000vw; margin-right: 2.500vw; border-radius: 50%;}
+    .board-view .reply-user .user-info {width: calc(100% - 7.500vw); font-size: 2.000vw;} 
+    .board-view .reply-user .user-date {font-size: 1.750vw;}
+
+    .board-view .replyItem .reply-detail {margin-bottom: 1.250vw; padding-left: 7.500vw; font-size: 1.750vw; line-height: 2.750vw;}
+}

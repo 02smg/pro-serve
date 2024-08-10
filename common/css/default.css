@@ -1,0 +1,40 @@
+@charset "utf-8";
+
+body,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,form,fieldset,p,input,textarea,i,u,em,strong,b,a,button,th,td, code {margin:0;padding:0;font-style:normal;}
+b,em {font-weight:inherit;}
+h1,h2,h3,h4,h5,h6 {font-size:inherit;}
+*,*:before,*:after {-webkit-box-sizing:border-box;box-sizing:border-box;}
+img,fieldset,iframe,button {border:0;}
+ul,li {list-style:none}
+input[type="text"],input[type="search"],input[type="tel"],input[type="password"],textarea {-webkit-appearance:none;}
+input,select,button,label,textarea {vertical-align:middle;outline:0;}
+input,textarea,button {font-size:inherit;font-family:inherit;color:inherit;line-height:inherit;}
+input[type="password"] {font-family:inherit;}
+select {font-size:inherit;color:inherit;line-height:inherit;-webkit-appearance:none;font-family:inherit;}
+input:disabled,select:disabled,button:disabled,label:disabled,a:disabled,textarea:disabled {cursor:default;}
+label,button,select,a {cursor:pointer;}
+table {border-collapse:collapse;border-spacing:0;width:100%;table-layout:fixed;}
+legend,
+caption {visibility:hidden !important;color:transparent !important;opacity:0 !important;width:0px !important;height:0px !important;font-size:0px !important;}
+a {text-decoration:none;color:inherit;outline:0;}
+a:visited {text-decoration:none;}
+a:hover,
+a:focus {text-decoration:none;}
+textarea {resize:none;line-height:1.5;}
+button {background:none;font-family:inherit;overflow:visible;text-align:inherit;font-weight:inherit;}
+u {text-decoration:none;}
+code {display:inline;color:inherit;font-size:inherit;line-height:inherit;font-family:inherit;font-weight:inherit;}
+html {-webkit-text-size-adjust:none;}
+
+body {word-break:keep-all;line-height:1;font-family:"Pretendard, Arial, sans-serif";font-weight:500;color:#fff;}
+
+
+/* 웹접근성을 위한 텍스트 숨김 처리 */
+.blind {display: block;overflow: hidden;position: absolute !important;left: -9999px;width: 1px;height: 1px;font-size: 0;line-height: 0;text-indent: -9999px;}
+/* 웹접근성을 위한 텍스트 숨김 처리 */
+
+
+#wrap {background-color: #000;}
+
+.icon {display: inline-block; margin-top: -1px;}
+

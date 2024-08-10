@@ -1,0 +1,144 @@
+@charset "utf-8";
+
+.inner {position: relative; width: 100%; height: 100%; margin: 0 auto;}
+.btn {display: inline-block; padding: 12px 20px 10px; border-radius: 40px; border: 1px solid #01B3FF; font-size: 14px; color: #01B3FF;}
+
+/* --------------------------------- header css --------------------------------- */
+.header {z-index: 1000; width: 100%; position: absolute;top: 0; left: 0; transition: all 0.3s;}
+
+.headerNotice {display: flex; align-items: center; width: 62.5%; min-width: 800px; height: 60px; margin: 0 auto; padding: 0 25px; border-bottom: 1px solid rgba(255, 255, 255, 0.2); box-sizing: border-box;}
+.headerNotice .notioceIcon {margin-right: 20px;}
+
+.headerNotice .noticeSwiper {width: 100%;height: 100%; cursor: default;}
+.headerNotice .noticeSwiper .swiper-slide {display: flex;align-items: center; font-size: 13px;}
+
+.headerBody {width: 100%; height: 80px; margin: 0 auto;}
+.headerBody .headerBody-wrap {display: flex; align-items: center; width: 62.5%; min-width: 800px; height: 100%; margin: 0 auto; padding: 0 25px;  box-sizing: border-box;}
+.headerBody.fixed {position: fixed; top: 0; left: 0; width: 100%;background-color: rgba(0, 0, 0, 0.2); animation:scrollU 0.5s ease both; backdrop-filter: blur(5px); }
+.headerBody.fixed:not(.scroll) {animation:scrollD 0.5s ease both;}
+
+.headerBody .logo a {display: inline-block; font-size: 34px; font-weight: bold;}
+
+.headerBody .gnb-trigger {display: none; position: relative; z-index: 9999;}
+.headerBody .gnb {display: flex; align-items: center; height: 100%; margin: 0 0 0 auto;}
+.headerBody .gnb-link {display: flex; align-items: center; margin: 0 30px 0 auto;}
+.headerBody .gnb-link ul {display: flex; align-items: center;} 
+.headerBody .gnb-link ul li {font-size: 14px; font-weight: 500; color: #fff;}
+.headerBody .gnb-link ul li a {padding: 10px 24px;}
+
+.headerBody .alert {position: relative; display: flex; align-items: center; font-size: 26px; width: 27px; height: 100%;}
+.headerBody .alert.on::after {content: ''; position: absolute; top: 22px; right: 3px; width: 10px; height: 10px; border-radius: 50%; background-color: #01B3FF;}
+
+.alertPopup {display: none; height: 0; min-height: 0; overflow-y: auto; z-index: 99;position: absolute; top: 70px; right: 0; width: 300px; padding: 0 15px 0 25px; background-color: #131313; border: 10px solid #131313; border-radius: 16px;}
+.alertPopup.on {display: block; height: auto; min-height: 230px;}
+.alertPopup .alertItem { padding: 10px 0; border-bottom: 1px solid #353535; color: rgba(255, 255, 255, 0.5);}
+.alertPopup .alertItem.notRead {color: #fff;}
+.alertPopup .alertItem:last-of-type {border-bottom: 0 none;}
+.alertPopup .alertItem .alert-title {position: relative;font-size: 14px; font-weight: 700;}
+.alertPopup .alertItem.notRead .alert-title::after {content: ''; position: absolute; top: 0px; right: -8px; width: 6px; height: 6px; border-radius: 50%; background-color: #01B3FF;}
+.alertPopup .alertItem .alert-desc { width: calc(100% - 10px); overflow: hidden; text-overflow: ellipsis;white-space: nowrap;margin-top: 8px; font-size: 12px; line-height: 13px; font-weight: 200;}
+
+.alertPopup::-webkit-scrollbar {width: 4px;}
+.alertPopup::-webkit-scrollbar-thumb {background: #000;
+border-radius: 10px;} 
+.alertPopup::-webkit-scrollbar-track {background: #333; border-radius: 10px;}
+/* --------------------------------- //header css --------------------------------- */
+
+#content {padding-top: 140px;}
+
+.board .board-inner {width: 800px; margin: auto; padding: 100px 0; text-align: center;}
+.board .board-title {color: #fff;}
+.board .board-title h3 {font-size: 45px; font-weight: 900;}
+.board .board-title p {margin-top: 25px; font-size: 16px;}
+
+.board .board-list {display: inline-flex; justify-content: center; margin: 50px auto 0; padding: 20px 50px; border-radius: 30px; background-color: rgba(255, 255, 255, 0.2);}
+.board .board-list li {padding: 0 30px; border-left: 1px solid #fff; font-size: 15px;}
+.board .board-list li:first-child {border-left: 0 none;}
+
+.board .tbl-pagination {margin: 30px auto 0;}
+.board .tbl-pagination ul {display: flex; justify-content: center; align-items: center;}
+.board .tbl-pagination ul li a {margin: 15px; font-size: 12px; color: #fff; opacity: 0.3;}
+.board .tbl-pagination ul li.on a {font-size: 15px; opacity: 1;}
+
+
+/* --------------------------------- footer css --------------------------------- */
+.footer {width: 62.5%; min-width: 800px; padding: 0 40px 60px;}
+.footer .logo {font-size: 34px;}
+.footer .footer-content {display: flex; align-items: center; margin-top: 20px;}
+.footer .copyright {font-size: 14px; font-weight: 300; color: #fff;}
+
+/* --------------------------------- //footer css --------------------------------- */
+
+/*--------------------------------- 모바일 --------------------------------- */
+@media screen and (max-width: 880px) {
+    .pc {display: none;}
+    body.no-scroll {overflow: hidden;}
+    .btn { padding: 1.500vw 2.500vw 1.250vw; border-radius: 5.000vw; border: 0.250vw solid #01B3FF; font-size: 2.250vw;}
+
+    .headerBody {height: 12.500vw}
+    .headerBody .logo a {font-size: 5.750vw;}
+
+    .headerNotice {display: none;}
+    .headerBody .headerBody-wrap {width:100%; min-width: 12.500vw; height: 12.500vw; padding: 0 3.750vw;}
+    .headerBody .gnb-trigger {display: flex; align-items: center; margin: 0 0 0 auto; font-size:4.500vw;}
+    .headerBody .gnb-trigger.on .closeIcon, 
+    .headerBody .gnb-trigger .menuIcon {display: block;}
+    .headerBody .gnb-trigger .closeIcon,
+    .headerBody .gnb-trigger.on .menuIcon {display: none;}
+
+    .headerBody .gnb {position: fixed; right:-80%;top:0;width:80%;background:#333;padding: 0 10vw 12.500vw 7vw; height:100vh;margin: 0; z-index: 900;animation: gnbLeft 0.3s ease both; animation-fill-mode: forwards;}
+    .headerBody .gnb.on {display: flex; justify-content: flex-end; align-items: flex-start; flex-direction: column-reverse;animation: gnbRight 0.3s ease both; animation-fill-mode: forwards;}
+
+    .headerBody .gnb-link {display: block;overflow: hidden;width: 100%; margin: 3.750vw 0 0;}
+    .headerBody .gnb-link ul {overflow: hidden; display: block;}
+    .headerBody .gnb-link ul li {display: flex; font-size:4.500vw; margin-bottom: 4.000vw;}
+    .headerBody .gnb-link ul li a {width: 100%; padding: 1.875vw 0;}
+    
+    .headerBody .alert {position: relative; display: block; width: 100%; min-height: 12.500vw; height: auto; font-size: 4.500vw;}
+    .headerBody .alertBtn {position:absolute; top: 4.375vw; right: 0;}
+    .headerBody .alert.on::after {top: 4.125vw;right: 0;width: 1.250vw;height: 1.250vw;}
+    .alertPopup {display: none; position: static; width: 100%; margin: 12.500vw 0 3.750vw; padding: 0 1.875vw 0 3.125vw;}
+    .alertPopup.on {display: block; max-height: 37.500vw;}
+    .alertPopup .alertItem .alert-title {font-size: 3.250vw;}
+    .alertPopup .alertItem .alert-desc {font-size: 2.500vw; line-height: 2.750vw;}
+    .alertPopup .alertItem.notRead .alert-title::after {width: 1.000vw; height: 1.000vw;}
+
+    #content {padding-top: 12.500vw;}
+    .board .board-inner {width: calc(100% - 7.500vw); margin: auto; padding: 12.500vw 0; }
+    .board .board-title h3 {font-size: 6.250vw;}
+    .board .board-title p {margin-top: 3.125vw; font-size: 2.750vw;}
+    
+    .board .board-list {margin: 6.250vw auto 0; padding: 2.500vw 6.250vw; border-radius: 3.750vw; background-color: rgba(255, 255, 255, 0.2);}
+    .board .board-list li {padding: 0 3.750vw; border-left: 0.250vw solid #fff; font-size: 2.750vw;}
+
+    .board .tbl-pagination {margin: 3.750vw auto 0;}
+    .board .tbl-pagination ul li a {margin: 1.875vw; font-size: 2.000vw;}
+    .board .tbl-pagination ul li.on a {font-size: 2.500vw;}
+
+    .footer {width:100%; min-width: 12.500vw; padding: 0 3.750vw 7.500vw;}
+    .footer .logo {font-size: 4.750vw;}
+    .footer .footer-content { align-items: center; margin-top: 2.500vw;}
+    .footer .copyright {font-size: 2vw; font-weight: 500; }
+}
+
+/*--------------------------------- //모바일 --------------------------------- */
+
+
+@keyframes scrollD {
+    0% {transform: translateY(0);}
+    100% {transform:  translateY(-100%);}
+}
+
+@keyframes scrollU {
+    0% {transform: translateY(-100%);}
+    100% {transform:  translateY(0);}
+}
+
+@keyframes gnbLeft {
+    0% {right: 0;}
+    100% {right: -80%;}
+}
+@keyframes gnbRight {
+    0% {right: -80%;}
+    100% {right: 0%;}
+}

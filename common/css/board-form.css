@@ -1,0 +1,51 @@
+@charset "utf-8";
+
+.board-form .board-form-inner {width: 800px; margin: auto; padding: 100px 0; text-align: center;}
+
+.board-form-table {border: solid #fff; border-width: 4px 0 1px 0; text-align: left;}
+.board-form-table tr {border-bottom: 1px solid rgba(255, 255, 255, 0.3);}
+.board-form-table th {padding: 0 26px; font-size: 15px;}
+.board-form-table td {position: relative; padding: 16px 36px;}
+.board-form-table td input{width: 100%; height: 36px;background-color: transparent; border: 1px solid rgba(255, 255, 255, 0.3);border-radius: 5px;font-size: 14px;vertical-align: middle;padding: 0 14px;font-weight: 350;}
+.board-form-table td .select {position: relative;width: 160px;height: 36px;padding-right: 20px;border: 1px solid rgba(255, 255, 255, 0.3);border-radius: 5px;}
+.board-form-table td select {width: 100%;height: 100%;position: absolute;top: 0;left: 0;padding: 0 40px 0 12px;background-color: transparent !important;border: none;font-size: 14px;vertical-align: middle;color: #fff;}
+.board-form-table td .selectIcon {position: absolute; top: 50%; right: 15px; transform: translateY(-50%); font-size: 12px;}
+.custom-control-label {width: 20px; height: 20px; display: inline-block;position: relative;}
+.custom-control-label:after {content: ''; position: absolute;width: 20px;height: 20px;left: 50%;top: 0%;transform: translateX(-50%);background: url(../images/checkbox.svg) no-repeat center/10px; opacity: 0;}                                    
+.custom-control-input:checked ~ .custom-control-label::after {opacity: 1;}
+.custom-control-input:checked ~ .custom-control-label::before {border-color: #01B3FF;background-color: #01B3FF;}
+.custom-checkbox .custom-control-label:before {position: absolute;display: inline-block;content: '';width: 20px;height: 20px;left: 0;top: 50%;transform: translateY(-50%);border: 1px solid #ccc; border-radius: 2px;}
+.custom-control-input {position: absolute;left: 0;z-index: -1;width: 1rem;height: 1.25rem;opacity: 0;}
+.file-name-item {display: flex; align-items: center; margin-top: 10px; padding-left: 10px;}
+.file-name-text {margin-right: 10px;}
+.file-remove-btn {font-size: 12px;}
+
+.board-form-table td textarea{width: 100%; height: 300px; padding: 10px 14px; background-color: transparent; border: 1px solid rgba(255, 255, 255, 0.3);border-radius: 5px; font-size: 14px; resize: none;}
+
+.write-btn {margin-top: 40px; background-color: #00b3ff; padding: 14px 40px 12px; color: #fff;}
+
+/*--------------------------------- 모바일 --------------------------------- */
+@media screen and (max-width: 880px) {
+    .board-form .board-form-inner {width: calc(100% - 7.500vw); margin: 12.500vw auto 0; padding: 0 0 10.000vw;}
+
+    .board-form-table {border: solid #fff; border-width: 0.625vw 0 0.250vw 0;}
+    .board-form-table tr {border-bottom: 0.250vw solid rgba(255, 255, 255, 0.3);}
+    .board-form-table th {padding: 0 3.750vw; font-size: 2.250vw;}
+    .board-form-table td {padding: 2.500vw 5.000vw;}
+    .board-form-table td input{width: 100%; height: 5.250vw; border: 0.250vw solid rgba(255, 255, 255, 0.3);border-radius: 0.625vw;font-size: 2.000vw;padding: 0 2.000vw;}
+    .board-form-table td .select {width: 22.500vw;height: 5.250vw;padding-right: 2.500vw;border: 0.250vw solid rgba(255, 255, 255, 0.3);border-radius: 0.625vw;}
+    .board-form-table td select {width: 100%;height: 100%;top: 0;left: 0;padding: 0 5.250vw 0 1.750vw;font-size: 2.000vw; line-height: 2.125vw;}
+    .board-form-table td .selectIcon { top: 50%; right: 1.875vw; transform: translateY(-50%); font-size: 1.500vw;}
+    .custom-control-label {width: 3.250vw; height: 3.250vw; }
+    .custom-control-label:after { width: 3.250vw;height: 3.250vw;left: 50%;top: 0%;transform: translateX(-50%);background: url(../images/checkbox.svg) no-repeat center/1.625vw;}
+    .custom-checkbox .custom-control-label:before {width: 3.250vw;height: 3.250vw;left: 0;top: 50%;transform: translateY(-50%);border: 0.125vw solid #ccc; border-radius: 0.250vw;}
+    .custom-control-input{left: 0;width: 1rem; height: 1.25rem;opacity: 0;}
+    .file-name-item { align-items: center; margin-top: 1.750vw; padding-left: 1.250vw;}
+    .file-name-text {margin-right: 1.250vw; font-size: 2.250vw;}
+    .file-remove-btn {font-size: 2.000vw;}
+
+    .board-form-table td textarea{width: 100%; height: 37.500vw; padding: 1.250vw 1.750vw;  border: 0.250vw solid rgba(255, 255, 255, 0.3);border-radius: 0.625vw; font-size: 2.000vw; resize: none;}
+
+    .write-btn {margin-top: 5.000vw; padding: 2.000vw 5.750vw 1.500vw; font-size: 3.000vw;}
+   
+}

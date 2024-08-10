@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="../common/css/default.css">
+    <link rel="stylesheet" href="../common/css/layout.css">
+    <link rel="stylesheet" href="../common/css/boardView.css">
+    <title>KKSC - 프로젝트 및 아이디어 공유 게시판</title>
+    
+</head>
+<body>
+    <div id="wrap">
+        <!-- header [S] -->
+        <header id="header" class="header">
+            <div class="header-inner inner">
+
+                <!-- headerNotice [S] -->
+                <div class="headerNotice">
+                    <span class="notioceIcon icon">
+                        <i class="fa-solid fa-bullhorn"></i>
+                    </span>
+                    <div class="swiper noticeSwiper">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide">공지사항입니다 일이삼사오육칠팔구십일이삼사오육칠팔구십</div>
+                          <div class="swiper-slide">공지사항입니다2 일이삼사오육칠팔구십일이삼사오육칠팔구십</div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                      </div>
+                    
+                </div>
+                <!-- headerNotice [E] -->
+
+
+                 <!-- headerBody [S] -->
+                 <!-- [A] 20240809 : headerBody 구조 변경 -->
+                 <div class="headerBody">
+                    <div class="headerBody-wrap">
+                        <h1 class="logo"><a href="#">KKSC</a></h1>
+                        <!-- gnb -->
+                        <div class="gnb-trigger" id="gnb-trigger">
+                            <button type="button">
+                                <i class="fa-solid fa-bars icon menuIcon"></i>
+                                <i class="fa-solid fa-x icon closeIcon"></i>
+                            </button>
+                        </div>
+                        <div class="gnb">
+                            <div id="gnb-link" class="gnb-link">
+                                <ul>
+                                    <!-- [L] :: 임시 메뉴 항목입니다.  -->
+                                    <li><a href="#">동아리 소개</a></li>
+                                    <li><a href="#">모집 분야</a></li>
+                                    <li><a href="#">모집 안내</a></li>
+                                    <li><a href="#">모집 일정</a></li>
+                                    <li><a href="#">지원하기</a></li>
+                                </ul>
+                            </div>
+                            
+                            <!-- [D] :: 확인할 메시지가 있을 경우 class on 추가 / 없을 경우 on 제거 -->
+                            <div class="alert on">
+                                <a href="#" class="alertBtn">
+                                    <span class="alertIcon icon">
+                                        <i class="fa-solid fa-bell"></i>
+                                    </span>
+                                </a>
+        
+                                <div class="alertPopup">
+                                    <div class="alertItem notRead">
+                                        <a href="#">
+                                            <span class="alert-title">읽지 않은 메세지 예시 UI입니다.</span>
+                                            <p class="alert-desc">메세지 내용 메세지 내용 메세지 내용 메세지 내용</p>
+                                        </a>
+                                    </div>
+                                    <div class="alertItem">
+                                        <a href="">
+                                            <span class="alert-title">읽은 메세지 예시 UI입니다.</span>
+                                            <p class="alert-desc">메세지 내용 메세지 내용 메세지 내용 메세지 내용</p>
+                                        </a>
+                                    </div>
+                                    <div class="alertItem">
+                                        <a href="">
+                                            <span class="alert-title">읽은 메세지 예시 UI입니다.</span>
+                                            <p class="alert-desc">메세지 내용 메세지 내용 메세지 내용 메세지 내용</p>
+                                        </a>
+                                    </div>
+                                    <div class="alertItem">
+                                        <a href="">
+                                            <span class="alert-title">읽은 메세지 예시 UI입니다.</span>
+                                            <p class="alert-desc">메세지 내용 메세지 내용 메세지 내용 메세지 내용</p>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- [A] 20240809 : headerBody 구조 변경 -->
+                <!-- headerBody [E] -->
+            </div>
+        </header>
+        <!-- header [E] -->
+
+        <!-- content [S] -->
+        <main id="content">
+            <section id="board" class="board">
+                <div class="board-inner">
+                    <div class="board-content">
+                        <div class="board-title">
+                            <h3>KKSC IDEA BOARD</h3>
+                            <p>자유롭게 프로젝트 및 아이디어를 공유해 보세요.</p>
+                        </div>
+                        <ul class="board-list">
+                            <li><a href="./board-notice.html">공유 게시판</a></li>
+                            <li><a href="./board-portfolio.html">포트폴리오</a></li>
+                            <li><a href="./board-notice.html">공지사항</a></li>
+                        </ul>
+                        <div class="board-view">
+                            <div class="view-head">
+                                <span class="head-type">공유게시판</span>
+                                <h4 class="head-title">게시글 제목입니다.게시글 제목입니다.게시글 제목입니다.</h4>
+                                <div class="head-info">
+                                    <span class="info-date">9999-99-99</span>
+                                    <span class="info-author">작성자 이름</span>
+                                </div>
+                            </div>
+                            <div class="veiw-body">
+                                <div class="viewInfo">
+                                    <img src="../common/images/cardImg.jpg" alt="이미지예시">
+                                    <img src="../common/images/cardImg.jpg" alt="이미지예시">
+                                    <img src="../common/images/cardImg.jpg" alt="이미지예시">
+                                    <p><p>게시글 내용입니다.가천대학교(嘉泉大學校, Gachon University)는 대한민국 경기도 성남시 수정구와 인천광역시 연수구에 소재한 사립
+                                        종합대학이다.
+
+                                        각각 경기도립인천병원부설간호양성소와 경원공업전문대학을 모태로 둔 가천의과대학과 경원대학교가 2012년 통합하여 현재에 이르고 있다. 국문
+                                        약칭으로 가천대(嘉泉大) 등을 사용하고 있다. 설립 이후, 초기에는 단과대학과 전문대학 등에 불과하였으나, 1987년 경원대학이 종합대학 승격을
+                                        시작으로 규모가 커져 2023년 현재 15개 단과대학, 70개 학부 전공, 일반대학원과 8개의 특수대학원으로 구성된다.
+
+                                        개요
+                                        가천대학교(총장 이길여)는 2012년 가천의대, 가천길대, 경원대, 경원전문대 4개 대학을 통합한 종합대학이다. 메인 캠퍼스(글로벌캠퍼스)는
+                                        경기도 성남시 수정구에 위치하고 있으며, 인천에 의대, 약대, 간호대, 보건대, 가천대 길병원이 소재한 메디컬캠퍼스를 운영하고 있다. 2020년
+                                        기준 14개 단과대학, 65개 학과(전공)를 두고 있다. 학부 입학정원은 3,754명, 대학원생과 외국인 학생을 포함한 총 재학생 수는 약
+                                        20,801명이다. 규모 면에서 학부 기준 수도권 5위 수준의 대규모 대학이다. 길병원과 가천의과대학을 설립하고, 공익의료·교육·문화재단인
+                                        가천길재단을 운영하고 있는 이길여 회장이 총장을 맡고 있다.
+                                        <br><br>
+                                        의과대와 한의대, 약학대, 간호대를 모두 갖추고 있어 메디컬 파워를 자랑한다. 1998년 개교한 의과대학은 최상의 의료교육 인프라를 구축하고
+                                        있다. 국가지정 연구중심병원인 가천대 길병원은 국내 최초로 인공지능 의사 ‘왓슨’을 도입, 환자 진료에 활용하고 있다. 또한 뇌영상과 기초의학
+                                        분야에서 세계적 수준을 자랑하는 가천뇌과학연구원, 이길여 암·당뇨연구원, 가천바이오나노연구원 등을 운영하고 있다. 대학의 사회공헌활동의 일환으로
+                                        0~3세 영유아의 육아연구와 행복한 가족문화 형성을 위한 '세살마을연구원'을 운영하고 있다.
+                                        <br><br>
+                                        2002년에는 국내 최초로 소프트웨어 단과대학을 설립하였으며, 2015년에는 SW중심대학에 선정돼 글로벌 경쟁력을 갖춘 SW 전문인력 양성에
+                                        앞장서고 있다. 2016년부터 전체 재학생 대상으로 SW교육을 의무화하고, 2019년에는 SW Passport(인증제) 제도를 도입하는 등
+                                        IT와 SW 역량을 갖춘 인재 양성에 앞장서고 있다. 4차 산업혁명 시대를 이끌 인재 양성을 위해 2020년 인공지능(AI)학과를 신설하였다.
+                                        <br><br>
+                                        2012년 개관한 하와이가천글로벌센터는 와이키키 중심부에 위치하고 있으며, 지상3층 규모로 숙소와 라운지, 야외수영장, PC LAB 등
+                                        부대시설을 갖추고 있다. 매년 300여 명의 학생들이 하와이 현지에서 4~15주 동안 영어연수와 현지문화체험을 진행하고 있다. 학생들의 경제적
+                                        부담을 줄이기 위해 학비와 기숙사비, 왕복항공료 등은 대학에서 지원한다. 이밖에 미국, 영국, 중국, 호주, 캐나다 등 해외 16개국 56개
+                                        대학과 다양한 국제교류 프로그램을 운영하고 있다.
+                                    </p></p>
+                                </div>
+                            </div>
+                            <div class="view-comment">
+                                <div class="comment-write">
+                                    <span>댓글 작성</span>
+                                    <textarea id="comment-textarea" placeholder="댓글을 입력하세요"></textarea>
+                                    <button type="button" class="btn comment-btn">댓글 달기</button>
+                                </div>
+                                <div class="comment-list" id="comment-list">
+                                    <!-- [D] :: 댓글, 답글 표시 되는 영역 -->
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#" class="btn board-btn">목록</a>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <!-- content [E] -->
+
+        <!-- footer [S] -->
+        <footer id="footer" class="footer">
+            <div class="footer-inner inner">
+                <h1 class="logo"><a href="#">KKSC</a></h1>
+                <div class="footer-content">
+                    <p class="copyright">© 2024 KKSC. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+        <!-- footer [E] -->
+    </div>
+    <!-- wrap -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="../common/js/ui.js"></script>
+    <script src="../common/js/board-view.js"></script>
+</body>
+</html>
