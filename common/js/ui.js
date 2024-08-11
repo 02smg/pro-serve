@@ -1,18 +1,39 @@
+let isPopupVisible = false;
+let alertPopup;
+
 document.addEventListener("DOMContentLoaded", function () {
   handleGnb();
   handleScrollHeader();
-  setupAlertPopup();
   setupAnchorScrolling();
+  handleModal()
 });
 
 function handleGnb() {
   const gnbTrigger = document.querySelector('.gnb-trigger');
-  const gnb = document.querySelector('.gnb')
+  const gnb = document.querySelector('.gnb');
+  const gnbDimmed = document.querySelector('.gnb-dimmed');
+
+  function toggleGnb(state) {
+    gnbTrigger.classList.toggle('on', state);
+    gnb.classList.toggle('on', state);
+    gnbDimmed.classList.toggle('on', state);
+    document.body.classList.toggle('no-scroll', state);
+  }
+
   gnbTrigger.addEventListener('click', function () {
-    gnbTrigger.classList.toggle('on')
-    gnb.classList.toggle('on');
-  })
+    const isOpen = gnbTrigger.classList.contains('on');
+    toggleGnb(!isOpen);
+  });
+
+  gnbDimmed.addEventListener('click', function() {
+    toggleGnb(false);
+  });
+
+  if (window.innerWidth > 800) {
+    toggleGnb(false);
+  }
 }
+
 
 function handleScrollHeader() {
   let isScrolling; // 스크롤 상태 플래그
@@ -33,7 +54,6 @@ function handleScrollHeader() {
   }, 250);
 
   function checkScrollPosition() {
-    if (window.innerWidth > 800) {
       const currentScrollTop = window.scrollY;
 
       if (Math.abs(lastScrollTop - currentScrollTop) <= scrollThreshold) {
@@ -42,6 +62,10 @@ function handleScrollHeader() {
 
       if (currentScrollTop > lastScrollTop && currentScrollTop > headerHeight) {
         header.classList.remove('scroll');
+        if (isPopupVisible) {
+          alertPopup.classList.remove('on');
+          isPopupVisible = false;
+        }
       } else if (currentScrollTop <= headerHeight) {
         header.classList.remove('fixed');
       } else {
@@ -55,17 +79,17 @@ function handleScrollHeader() {
     }
   }
 
-
-}
-
 function setupAnchorScrolling() {
   const anchorLinks = document.querySelectorAll('.anchorLinks');
-
+  const gnbTrigger = document.querySelector('.gnb-trigger');
+  const gnb = document.querySelector('.gnb');
   anchorLinks.forEach(link => {
     link.addEventListener("click", function (event) {
       if (link.hash !== "") {
         event.preventDefault();
-
+        gnbTrigger.classList.remove('on');
+        gnb.classList.remove('on');
+        document.body.classList.remove('no-scroll');
         const targetId = link.hash.substring(1);
         const targetElement = document.getElementById(targetId);
 
@@ -76,7 +100,6 @@ function setupAnchorScrolling() {
     });
   });
 
-  // anc 클릭시 해당 영역으로 scroll
   function smoothScrollTo(targetElement) {
     const startPosition = window.pageYOffset;
     const targetPosition = targetElement.offsetTop;
@@ -111,34 +134,34 @@ function setupAnchorScrolling() {
   }
 }
 
-// 알림 팝업 처리
-function setupAlertPopup() {
-  let isPopupVisible = false;
-  const alertButton = document.querySelector('.alertBtn');
-  const alertPopup = document.querySelector('.alertPopup');
 
-  alertButton.addEventListener('click', function (event) {
-    event.stopPropagation();
-    if (!isPopupVisible) {
-      alertPopup.classList.add('on');
-      isPopupVisible = true;
-    } else {
-      alertPopup.classList.remove('on');
-      isPopupVisible = false;
-    }
-  });
-  if (window.innerWidth > 800) {
-  document.body.addEventListener('click', function (event) {
-    if (isPopupVisible && !alertPopup.contains(event.target) && !alertButton.contains(event.target)) {
-      alertPopup.classList.remove('on');
-      isPopupVisible = false;
-    }
-  });
+function handleModal(){
+  const langBtn = document.querySelectorAll('.popupBtn'); 
+  const modal = document.querySelector('.modal')
+  const modalFilter = modal.querySelector('.modal .filter')
+  const modalClose = modal.querySelector('.close_btn');
+
+  langBtn.forEach(link => {
+    link.addEventListener('click', function(e){
+    e.preventDefault();
+    modal.classList.add('show-modal');
+    document.body.style.overflow = "hidden";
+  })
+
+  modalClose.addEventListener('click', function(e){
+    e.preventDefault();
+    modal.classList.remove('show-modal');
+    document.body.style.overflow = "auto";
+  })
+
+  modalFilter.addEventListener('click', function(e){
+    e.preventDefault();
+    modal.classList.remove('show-modal');
+    document.body.style.overflow = "auto";
+})
+  })
 }
-  alertPopup.addEventListener('click', function (event) {
-    event.stopPropagation();
-  });
-}
+
 
 // 상단 헤더 공지사항 swiper
 var swiper = new Swiper(".noticeSwiper", {
@@ -150,4 +173,4 @@ var swiper = new Swiper(".noticeSwiper", {
   speed: 800,
   loop: true,
   touchRatio: 0
-}); 
+});
